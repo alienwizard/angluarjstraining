@@ -5,7 +5,8 @@ module.exports = {
 	entry: ['bootstrap-loader','./src/app.js'],
 
 	output: {
-		path: './dist/',
+		path: './dist',
+		publicPath: "dist",
 		filename: 'bundle.js'
 	},
 
@@ -16,6 +17,8 @@ module.exports = {
 				exclude: /node_modules/,
 				loaders: ['babel-loader']
 			},
+
+			{ test: /\.html$/, loader: 'raw-loader' },
 
 			{
 				test: /\.json$/,
@@ -45,9 +48,8 @@ module.exports = {
 	 plugins: [
         new webpack.ProvidePlugin({
             $: "jquery",
-            jQuery: "jQuery"
+            jQuery: "jquery"
         })
     ]
 
 }
-
