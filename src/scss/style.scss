@@ -14,20 +14,38 @@ h1{
 	color: green;
 
 }
+//Createstyles
+#createbutton{
+	background-color: white;
+	color: green;
+	transition: 0.4s ease all;
+
+	.glyphicon-plus{
+		transition: 0.8s ease transform;
+	}
+
+	&:hover{
+		background-color: green;
+		color: white;
+		//kanske en annan animation. testade scale och va inte snyggt.
+		.glyphicon-plus{
+		}
+	}
+}
 
 #SkillsTable{
-	
+
 
 	.skill-item{
-		position:relative;
-		height: 40px;
-		width: 100%;
-		background-color: green;
-		margin: 10px 0px;
-		padding:10px;
-		padding-left: 20px;
-		color: gray;
-		border-radius: 20px;
+		position: relative;
+		    height: 40px;
+		    width: 100%;
+		    background-color: green;
+		    margin: 10px 0px;
+		    padding: 10px;
+		    padding-left: 60px;
+		    color: #e5e5e5;
+		    border-radius: 20px;
 
 		.skill-level{
 			height: 45px;
@@ -36,12 +54,91 @@ h1{
 			left: 0px;
 			top: 0px;
 			bottom:0px;
+			margin: auto;
 			border-radius: 50%;
 			background-color: white;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			color:black;
+		}
+
+		span.glyphicon.glyphicon-pencil{
+			color: white;
+			transition: 0.5s ease all;
+
+			&:hover{
+
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+
+			}
 		}
 	}
 
+}
+
+//Modal for create
+.skill-create-wrap{
+	position: fixed;
+	margin: auto;
+	padding: 25px;
+	top: 0px;
+	left:0px;
+	right:0px;
+	width: 70%;
+	box-shadow: 0 50px 100px rgba(50,50,93,.1),0 15px 35px rgba(50,50,93,.15),0 5px 15px rgba(0,0,0,.1);
+	font-size: 17px;
+line-height: 40px;
+		background-color: white;
+	border-radius: 4px;
+	z-index: 99;
+
+}
+
+//Modalstyle for edit form
+.editform{
+	position: fixed;
+	margin: auto;
+	padding: 25px;
+	top: 0px;
+	left:0px;
+	right:0px;
+	width: 70%;
+	box-shadow: 0 50px 100px rgba(50,50,93,.1),0 15px 35px rgba(50,50,93,.15),0 5px 15px rgba(0,0,0,.1);
+	font-size: 17px;
+line-height: 40px;
+		background-color: white;
+	border-radius: 4px;
+	z-index: 99;
+
+	&.active{
+
+
+
+	}
+
+}
+//GENERELLA REGLER FÖR ANIMATIONER
+[ui-view].ng-enter, [ui-view].ng-leave {
+	-webkit-transition:all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+
+}
+
+
+[ui-view].ng-enter{
+	opacity: 0;
+}
+
+[ui-view].ng-enter-active {
+	opacity: 1;
+}
+
+[ui-view].ng-leave{
+	opacity: 1;
+}
+
+[ui-view].ng-leave-active {
+	opacity: 0;
 }

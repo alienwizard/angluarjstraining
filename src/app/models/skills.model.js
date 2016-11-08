@@ -44,12 +44,21 @@ export default angular.module('skillsApp.models.skills', [
     }
 
     skillsModel.createSkill = function (skill){
-      bookmark.id = bookmarks.length;
-      bookmarks.push (bookmark);
+      skill.id = skills.length;
+      skills.push (skill);
+    }
+
+    skillsModel.stopCreating = function() {
+
     }
 
     skillsModel.updateSkill = function (skill){
+      console.log(skill);
+      var index = _.findIndex(skills, function (b) {
+        return b.id == skill.id
+      });
 
+      skills[index] = skill;
     }
 
     skillsModel.deleteSkill = function (skill) {

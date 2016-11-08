@@ -6,7 +6,7 @@ export default angular.module('skills.create', [
       .state('skillsapp.skills.create', {
         url: 'skills/create',
         views: {
-          '@skillsapp.skills': {
+          'create@skillsapp.skills': {
             templateUrl: 'src/app/skills/create/skill-create.tmpl.html',
             controller: 'CreateSkillCtrl'
           }
@@ -30,7 +30,8 @@ export default angular.module('skills.create', [
 
       function createSkill(){
         skills.createSkill($scope.newSkill);
-        stopCreateing();
+        console.log($scope.newSkill);
+        stopCreating();
       }
       function resetForm() {
         $scope.newSkill = {
@@ -42,7 +43,7 @@ export default angular.module('skills.create', [
       }
       $scope.toggleCreating = toggleCreating;
       $scope.stopCreating = stopCreating;
-      $scope.createBookmark = createBookmark
+      $scope.createSkill = createSkill;
 
       resetForm();
       toggleCreating();

@@ -1,18 +1,25 @@
 <div class="row">
     <div class="col-md-8">
-      <h1>Skills</h1>
+      <h1>Färdigheter</h1>
     </div>
-    <!-- Create skill button -->
-    <ui-view id="create-wrap">
+    <!-- view för skapandet av färdigheter -->
+    <div ui-view="create" id="create-wrap">
       <div class="col-md-4">
-      <button type="button" class="btn btn-link"></button>
+      <button type="button" id="createbutton" class="btn btn-link" ui-sref="skillsapp.skills.create">
+        <span class="glyphicon glyphicon-plus"></span>
+        Lägg till en ny färdighet
+      </button>
     </div>
-    </ui-view>
   </div>
+  </div>
+  <div class="container">
   <div class="row">
     <div class="col-md-12" id="SkillsTable">
-      <div ui-sref-active="editing" skill="skill" ng-repeat="skill in skills">
+      <!-- sortera i descendeing order -->
+
+      <div ui-sref-active="editing" skill="skill" ng-repeat="skill in skills | orderBy:'-level'">
         <div class="skill-item">
+          <div data-ng-show="$scope">Hello</div>
           <div class="skill-level">
             {{skill.level}}
           </div>
@@ -26,4 +33,7 @@
       </div>
 
     </div>
+  </div>
+</div>
+  <div ui-view="edit" ui-sref-active="active" ng-class="" id="edit-modal">
   </div>

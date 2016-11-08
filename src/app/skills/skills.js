@@ -1,8 +1,7 @@
 'use strict';
 import skillModel from '../models/skills.model'
 
-console.log(skillModel);
-
+//Huvudmodul för färdigheterna
 export default angular.module('skills', [
   'skills.edit',
   'skills.create',
@@ -24,12 +23,13 @@ export default angular.module('skills', [
   .controller('skillsCtrl', function skillsCtrl($scope, skills){
     $scope.getCurrentSkillName = skills.getCurrentSkillName;
 
+    //Hämta färdigheter från skillmodel och gör datan tillgänglig för $scope
     skills.getSkills()
       .then(function (result){
         $scope.skills = result;
       });
 
-          console.log(skills)
+
 
   })
   .name

@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular-animate": "^1.5.8",
     "angular-ui-router": "^0.3.1",
     "lodash": "^4.16.6"
   },
@@ -30,6 +31,7 @@
     "html-loader": "^0.4.4",
     "jquery": "^3.1.1",
     "json-loader": "^0.5.4",
+    "lodash": "^4.16.6",
     "node-sass": "^3.10.1",
     "raw-loader": "^0.5.1",
     "resolve-url": "^0.2.1",

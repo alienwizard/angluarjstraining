@@ -1,0 +1,33 @@
+<div class="editform">
+<h3>Gör ändringar för {{skill.name}}</h3>
+<form class="edit-form" ng-show="isEditing" ng-submit="updateSkill()" novalidate>
+  <div class="form-group">
+    <label>Färdighet</label>
+    <input type="text" class="form-control" ng-model="editedSkill.name" placeholder="skriv in den nya färdigheten">
+  </div>
+  <div class="form-group">
+    <label>Välj din färdighetsnivå</label>
+    <div class="form-check">
+      <label>1</label>
+      <input type="radio" class="form-check-input" ng-model="editedSkill.level" name="skillLevel" id="skillLevel1" checked value="1">
+    </div>
+    <div class="form-check">
+      <label>2</label>
+      <input type="radio" class="form-check-input" ng-model="editedSkill.level" name="skillLevel" id="skillLevel2" value="2">
+    </div>
+    <div class="form-check">
+      <label>3</label>
+      <input type="radio" class="form-check-input" ng-model="editedSkill.level" name="skillLevel" id="skillLevel3" value="3">
+    </div>
+    <div class="form-check">
+      <label>4</label>
+      <input type="radio" class="form-check-input" ng-model="editedSkill.level" name="skillLevel" id="skillLevel4" value="4">
+    </div>
+    <div class="form-check">
+      <label>5</label>
+      <input type="radio" class="form-check-input" ng-model="editedSkill.level" name="skillLevel" id="skillLevel5" value="5">
+    </div>
+    <button type="submit" class="btn btn-info btn-lg">Uppdatera</button><button  type="button" class="btn btn-danger btn-lg pull-right" ng-click="cancelEditing()" >Avbryt</button>
+  </div>
+</form>
+</div>

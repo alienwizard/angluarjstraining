@@ -1,3 +1,5 @@
+<div class="skill-create-wrap">
+<h1>Lägg till en ny färdighet</h1>
 <form class="skill-create-form" role="form" ng-submit="createSkill(newSkill)" novalidate>
   <div class="form-group">
     <input class="form-control" type="text" name="name" ng-model="newSkill.name" placeholder="Skriv in färdighetens namn">
@@ -5,10 +7,26 @@
   <div class="form-group">
     <label>Välj din färdighetsnivå</label>
     <div class="form-check">
-      <input type="radio" class="form-check-input" name="skillLevel" id="skillLevel1" checked>
+      <label>1</label>
+      <input type="radio" class="form-check-input" ng-model="newSkill.level" name="skillLevel" id="skillLevel1" checked value="1">
     </div>
     <div class="form-check">
-      <input type="radio" class="form-check-input" name="skillLevel" id="skillLevel2">
+      <label>2</label>
+      <input type="radio" class="form-check-input" ng-model="newSkill.level" name="skillLevel" id="skillLevel2" value="2">
     </div>
-    <button type="submit" class="btn btn-info btn-lg">Create</button>
+    <div class="form-check">
+      <label>3</label>
+      <input type="radio" class="form-check-input" ng-model="newSkill.level" name="skillLevel" id="skillLevel3" value="3">
+    </div>
+    <div class="form-check">
+      <label>4</label>
+      <input type="radio" class="form-check-input" ng-model="newSkill.level" name="skillLevel" id="skillLevel4" value="4">
+    </div>
+    <div class="form-check">
+      <label>5</label>
+      <input type="radio" class="form-check-input" ng-model="newSkill.level" name="skillLevel" id="skillLevel5" value="5">
+    </div>
+    <button type="submit" class="btn btn-info btn-lg">Create</button><button  type="button" class="btn btn-danger btn-lg pull-right" ng-click="stopCreating()" >Avbryt</button>
   </div>
+</form>
+</div>
