@@ -1,0 +1,14 @@
+<form class="skill-create-form" role="form" ng-submit="createSkill(newSkill)" novalidate>
+  <div class="form-group">
+    <input class="form-control" type="text" name="name" ng-model="newSkill.name" placeholder="Skriv in färdighetens namn">
+  </div>
+  <div class="form-group">
+    <label>Välj din färdighetsnivå</label>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="skillLevel" id="skillLevel1" checked>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="skillLevel" id="skillLevel2">
+    </div>
+    <button type="submit" class="btn btn-info btn-lg">Create</button>
+  </div>

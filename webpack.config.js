@@ -18,7 +18,7 @@ module.exports = {
 				loaders: ['babel-loader']
 			},
 
-			{ test: /\.html$/, loader: 'raw-loader' },
+			{ test: /\.html$/, loaders: ['raw-loader','file-loader'] },
 
 			{
 				test: /\.json$/,

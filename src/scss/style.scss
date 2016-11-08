@@ -14,3 +14,34 @@ h1{
 	color: green;
 
 }
+
+#SkillsTable{
+	
+
+	.skill-item{
+		position:relative;
+		height: 40px;
+		width: 100%;
+		background-color: green;
+		margin: 10px 0px;
+		padding:10px;
+		padding-left: 20px;
+		color: gray;
+		border-radius: 20px;
+
+		.skill-level{
+			height: 45px;
+			width:45px;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			bottom:0px;
+			border-radius: 50%;
+			background-color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+}

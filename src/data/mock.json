@@ -1,9 +1,23 @@
 [
-
 	{
 		"skill": "angularJS",
 		"id": 2,
-		"skillLevel": 3
+		"skillLevel": 3,
+		"levels":[
+			{
+					"level": 1,
+					"tooltip":"Lorem ipsum"
+			},
+			{
+				"level": 2,
+				"tooltip":"Lorem ipsum"
+			},
+			{
+				"level":3,
+				"tooltip": "Lorem ipsum"
+			}
+		]
+
 	},
 
 	{
@@ -17,7 +31,4 @@
 		"id": 2,
 		"skillLevel": 3
 	}
-
-
-
-]	
+]
